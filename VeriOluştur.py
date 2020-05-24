@@ -70,15 +70,15 @@ def dosya_oku(dosya_adı):
 
 
 
-isim_listesi = dosya_oku("isim_listesi.txt")
-soyisim_listesi = dosya_oku("soyisim.txt")
-kurumlar_listesi = dosya_oku("kurumlar.txt")
-adresler_listesi = dosya_oku("adresler.txt")
+isim_listesi = dosya_oku("data/isim_listesi.txt")
+soyisim_listesi = dosya_oku("data/soyisim.txt")
+kurumlar_listesi = dosya_oku("data/kurumlar.txt")
+adresler_listesi = dosya_oku("data/adresler.txt")
 adresler_listesi = [ x+y for x,y in zip(adresler_listesi[0::2], adresler_listesi[1::2]) ]
 adres_listesi = []
 for adres in adresler_listesi:
     adres_listesi.append(adres.replace(",", ""))
-tarih_listesi = dosya_oku("tarihler.txt")
+tarih_listesi = dosya_oku("data/tarihler.txt")
 
 kullanıcı_adı_listesi = [kullanıcı_adı(isim,soyisim) for isim,soyisim in zip(isim_listesi,soyisim_listesi)]
 
